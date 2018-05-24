@@ -5,11 +5,15 @@ let BOTTOM_NUMBER = ["|_|", "..|", "|_.", "._|", "..|", "._|", "|_|", "..|", "|_
 
 module.exports = function number(num) {
 
-    return ArrayToString(num);
+    return NumberToString(num);
 }
 
-function ArrayToString(num) {
+function NumberToString(num) {
     let numbers = num.split('');
+
+    return ArrayToString(numbers)
+}
+function ArrayToString(numbers) {
     let numStr1 = [];
     let numStr2 = [];
     let numStr3 = [];
@@ -19,5 +23,6 @@ function ArrayToString(num) {
         numStr2.push(CENTRE_NUMBER[item])
         numStr3.push(BOTTOM_NUMBER[item])
     })
+    
     return numStr1.join(" ") + "\n" + numStr2.join(" ") + "\n" + numStr3.join(" ") + "\n"
 }
