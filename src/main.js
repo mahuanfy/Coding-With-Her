@@ -4,7 +4,6 @@ let CENTRE_NUMBER = ["|.|", "..|", "._|", "._|", "|_|", "|_.", "|_.", "..|", "|_
 let BOTTOM_NUMBER = ["|_|", "..|", "|_.", "._|", "..|", "._|", "|_|", "..|", "|_|", "..|"]
 
 module.exports = function number(num) {
-
     return NumberToString(num);
 }
 
@@ -23,6 +22,6 @@ function ArrayToString(numbers) {
         numStr2.push(CENTRE_NUMBER[item])
         numStr3.push(BOTTOM_NUMBER[item])
     })
-    
+
     return numStr1.join(" ") + "\n" + numStr2.join(" ") + "\n" + numStr3.join(" ") + "\n"
 }
